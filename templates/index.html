@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Datascientist</title>
+  <link rel="stylesheet" href="static\css\styles.css"/> 
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Prédicteur d'achat : de Publicités sur les réseaux sociaux </h1>
+    <a href = "https://en.wikipedia.org/wiki/Social_network_advertising" target="_blank" class = "link"><span class = "titleLink">Social Network Ad</span></a><br><br>
+
+  <div id="header">
+      <img width="140" src="static\images\images.png" class="house"/>
+  </div><br>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="salary" placeholder="Salaire entre 15000 et 150000" required="required" />
+		<input type="text" name="age" placeholder="Âge entre 18 et 60 ans" required="required" />
+		<input type="text" name="male" placeholder="Sexe (1 : femme, 0 : homme)" required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Prédire</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>

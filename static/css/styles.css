@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    color: brown;
+    font-size: 40px;
+}
+
+
+form {
+    text-align: center;
+    font-size: medium;
+   
+}
+
+body {
+    background-color: aqua; text-align: center;font-size: 30px;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: red;
+    font-size: 18px;
+  }
+  input[type="text"]
+  {
+      font-size:24px;
+  }
+
+  button {
+    font-size: 20px;
+  }
